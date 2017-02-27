@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+        <h1> Welcome to the Blog </h1>
+
+        <hr>
+
+        {% for blog in all_posts %}
+
+            <!-- <div class = "post"> -->
+                <a href="{{blog.perma}}"> <div class="post-title">{{blog.title}}</div> </a>
+                <pre class="post-body">{{blog.post}}</pre>
+
+            </div>
+        {% endfor %}
+
+{% endblock %}
